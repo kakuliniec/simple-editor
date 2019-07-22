@@ -22,7 +22,6 @@ const save = document.querySelector('.form__button--save-js')
 
 save.addEventListener('click', (e) => {
   e.preventDefault();
-  console.log(message.value);
   localStorage.setItem('message', message.value);
 })
 
