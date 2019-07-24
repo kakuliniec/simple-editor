@@ -1,6 +1,20 @@
 @import "_normalize";
 @import "_variables";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap&subset=latin-ext');
+@keyframes backgroundChange {
+  0% {
+    background: green;
+  transform: scale(1)
+}
+    45% { background: yellowgreen;
+      transform: scale(3)
+    }
+    78%  {background: red;
+      transform: scale(.7);
+    }
+    100% {background: hotpink;
+      transform: scale(1);}  
+}
 
 html {
   box-sizing: border-box;
@@ -34,6 +48,19 @@ body {
     min-width: 200px;
     font-weight: 600;
     letter-spacing: 0.5px;
+    background: #e2dde2;
+    transition: transform .2s ease-in-out;
+    &:hover {transform: scale(1.05)}
+&--background {
+  background: #5353dd
+}
+    &--load {
+      color: black;
+      background: #e2dde2;
+      &:hover {
+        background: #948c94;
+      }
+    }
     &--save {
       background: #121232;
       color: white;
@@ -64,5 +91,22 @@ body {
 .main {
   max-width: 540px;
   width: 100%;
-
+  position: relative;
 }
+
+.test {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: #6b226b;
+  animation: backgroundChange 5s linear 2 forwards;
+  }
+
+
+//transition: transform 1s ease-in-out;
+ // &:hover {
+  //  bottom: 20px;
+ //   width: 100px;
+  //  transform: rotate(45deg) scale(2);
