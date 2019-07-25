@@ -308,6 +308,42 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes backgroundChange {
+  0% {
+    background: green;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  45% {
+    background: yellowgreen;
+    -webkit-transform: scale(3);
+            transform: scale(3); }
+  78% {
+    background: red;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+  100% {
+    background: hotpink;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes backgroundChange {
+  0% {
+    background: green;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  45% {
+    background: yellowgreen;
+    -webkit-transform: scale(3);
+            transform: scale(3); }
+  78% {
+    background: red;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+  100% {
+    background: hotpink;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -346,7 +382,24 @@ body {
   padding: 16px;
   min-width: 200px;
   font-weight: 600;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  background: #e2dde2;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  -o-transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }
+  .form__button:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05); }
+  .form__button--background {
+    background: #5353dd; }
+  .form__button--load {
+    color: black;
+    background: #e2dde2; }
+    .form__button--load:hover {
+      background: #948c94; }
   .form__button--save {
     background: #121232;
     color: white; }
@@ -364,6 +417,17 @@ body {
   min-height: 350px;
   padding: 12px; }
 
+g.scale {
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  -o-transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out; }
+  g.scale:hover {
+    -webkit-transform: scale(1.04);
+        -ms-transform: scale(1.04);
+            transform: scale(1.04); }
+
 .header {
   font-weight: 600;
   font-size: 44px;
@@ -372,6 +436,20 @@ body {
 
 .main {
   max-width: 540px;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
+
+.svg {
+  height: 200px; }
+
+.test {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: #6b226b;
+  -webkit-animation: backgroundChange 5s linear 2 forwards;
+          animation: backgroundChange 5s linear 2 forwards; }
 
 /*# sourceMappingURL=main.css.map */
