@@ -82,18 +82,38 @@ body {
   }
   &__wrapper {}
 }
+
+g.scale {
+  transition: transform .4s ease-in-out;
+  &:hover {
+transform: scale(1.04);}
+}
+
 .header {
   font-weight: 600;
   font-size: 44px;
   margin: 0;
   margin-bottom: 48px;
 }
+
 .main {
   max-width: 540px;
   width: 100%;
   position: relative;
 }
 
+.svg {
+  height: 200px;
+}
+
+//path.letter-c {
+//  transition: fill .3s ease-in-out;
+//  fill: red;
+//  &:hover {
+//    fill:whitesmoke;
+//  }
+//  }
+  
 .test {
   position: absolute;
   bottom: 0;
