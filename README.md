@@ -2,4 +2,4 @@
 
 ## Exercising with simple editor.
 
-![simple-editor](src/assets/img/cover2.png)
+![simple-editor](src/assets/img/cover.png)
